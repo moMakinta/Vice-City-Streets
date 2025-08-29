@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo City - Smart Open World</title>
+    <link rel="stylesheet" href="vcstyles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="startScreen">
+            <h1 style="font-size: 2.5em; margin-bottom: 20px; color: #40e0d0; font-weight: 700;">NEO CITY</h1>
+            <p style="font-size: 1.1em; margin-bottom: 30px; color: #a0a0a0; font-weight: 300;">Smart Open World Experience</p>
+            <p style="margin-bottom: 30px; line-height: 1.6; color: #c0c0c0;">
+                WASD - Move/Drive • SPACE - Shoot/Brake<br>
+                E - Enter/Exit Vehicle • R - Accept Mission<br>
+                Mouse - Aim & Shoot
+            </p>
+            <button class="btn" id="startButton">Enter Neo City</button>
+        </div>
+        
+        <div id="hud">
+            <div class="stat">
+                <span>Credits</span>
+                <span style="color: #40e0d0; font-weight: 600;">$<span id="money">0</span></span>
+            </div>
+            <div class="stat">
+                <span>Health</span>
+                <span id="healthPercent">100%</span>
+            </div>
+            <div class="health-bar">
+                <div class="health-fill" id="healthBar" style="width: 100%"></div>
+            </div>
+            <div class="stat">
+                <span>Heat Level</span>
+                <span id="wantedLevel" style="color: #ff6b6b;">0</span>
+            </div>
+        </div>
+        
+        <canvas id="minimap" width="220" height="160"></canvas>
+        
+        <div id="missionPanel">
+            <h3 style="color: #40e0d0; margin-bottom: 12px; font-weight: 600;">MISSION BRIEFING</h3>
+            <div id="missionContent">
+                <p id="missionText">Explore the city and press R near mission markers</p>
+            </div>
+            <div id="missionProgress" style="display: none;">
+                <div class="mission-objective">
+                    <div style="font-weight: 600; margin-bottom: 4px;" id="objective">Objective</div>
+                    <div style="font-size: 12px; color: #a0a0a0;" id="progressText">0/0</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="1200" height="800"></canvas>
+        
+        <div id="notification" class="notification">
+            <div id="notificationText">Mission Complete!</div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');
+        d.innerHTML="window.__CF$cv$params={r:'9765701723976cb8',t:'MTc1NjQwMTE5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+        b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');
+        a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';
+        document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);
+        else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);
+            'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+
+    </body>
+</html>
